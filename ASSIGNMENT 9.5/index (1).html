@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Discover Launchify, a modern landing page for creative ideas and projects.">
+    <meta name="theme-color" content="#635bff">
+    <title>Launchify | Build Your Future</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#home" class="logo" aria-label="Launchify home">
+                Launchify<span>.</span>
+            </a>
+
+            <button class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="nav-menu"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+
+                <a href="#get-started" class="nav-button">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero container" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR IDEAS, OUR PLATFORM</p>
+
+                <h1>Turn Your Ideas Into <span>Reality.</span></h1>
+
+                <p class="hero-description">
+                    Discover a simpler way to organize your work, build
+                    better projects, and bring your next big idea to life.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#get-started" class="button button-primary">
+                        Get Started
+                    </a>
+                    <a href="#features" class="button button-secondary">
+                        Explore Features
+                    </a>
+                </div>
+
+                <p class="hero-note">
+                    Simple tools. Smarter work. Better results.
+                </p>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/hero.jpg"
+                     alt="Creative workspace for planning new ideas"
+                     width="800"
+                     height="600"
+                     fetchpriority="high">
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">WHY CHOOSE US?</p>
+                    <h2>Everything You Need to Get Started</h2>
+                    <p>
+                        Useful features designed to make your work
+                        simpler, faster, and more organized.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <img src="images/feature1.jpg"
+                             alt="An organized workspace"
+                             width="600"
+                             height="400"
+                             loading="lazy">
+                        <div class="feature-content">
+                            <span class="feature-number">01</span>
+                            <h3>Easy to Use</h3>
+                            <p>
+                                Enjoy a clear and simple interface that
+                                helps you focus on your goals.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <img src="images/feature2.jpg"
+                             alt="A modern digital design"
+                             width="600"
+                             height="400"
+                             loading="lazy">
+                        <div class="feature-content">
+                            <span class="feature-number">02</span>
+                            <h3>Modern Design</h3>
+                            <p>
+                                Create an attractive experience with
+                                consistent styles and spacing.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <img src="images/feature3.jpg"
+                             alt="People collaborating on a project"
+                             width="600"
+                             height="400"
+                             loading="lazy">
+                        <div class="feature-content">
+                            <span class="feature-number">03</span>
+                            <h3>Built for Growth</h3>
+                            <p>
+                                Build a strong foundation for new ideas,
+                                projects, and future improvements.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about-section container" id="about">
+            <div>
+                <p class="eyebrow">ABOUT LAUNCHIFY</p>
+                <h2>A Better Way to Bring Ideas to Life</h2>
+            </div>
+
+            <p>
+                Launchify is a sample landing page that demonstrates
+                semantic HTML, responsive layouts, and modern CSS.
+                Customize it for your own product, service, or portfolio.
+            </p>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section" id="get-started">
+            <div class="container cta-content">
+                <div>
+                    <h2>Ready to Start Something Great?</h2>
+                    <p>
+                        Take the first step and turn your next idea
+                        into a project.
+                    </p>
+                </div>
+
+                <a href="mailto:hello@example.com"
+                   class="button button-light">
+                    Contact Us
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo footer-logo">
+                Launchify<span>.</span>
+            </a>
+            <p>
+                &copy; 2026 Launchify. Created for a web development project.
+            </p>
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu");
+        const navLinks = document.querySelectorAll(".nav-menu a");
+
+        function closeMenu() {
+            navMenu.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+        }
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navMenu.classList.toggle("is-open");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 700) {
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+</html>
